@@ -9,44 +9,36 @@ import java.time.LocalDate;
  * @author sa
  *
  */
-public class Mentoria {
-	
-	private String titulo;
-	private String descricao;
+public class Mentoria extends Conteudo {
+
 	private LocalDate data;
-	public String getTitulo() {
-		return titulo;
-	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+
 	public LocalDate getData() {
 		return data;
 	}
+
 	public void setData(LocalDate data) {
 		this.data = data;
 	}
-	public Mentoria(String titulo, String descricao, LocalDate data) {
-		super();
-		this.titulo = titulo;
-		this.descricao = descricao;
+
+	public Mentoria(LocalDate data) {
 		this.data = data;
 	}
-	
+
 	public Mentoria() {
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public double calcularXp() {
+		return XP_PADRAO + 28d;
+	}
+
 	@Override
 	public String toString() {
-		return "Mentoria [titulo=" + titulo + ", descricao=" + descricao + ", data=" + data + "]";
+		return "Mentoria [data=" + data + ", Titulo=" + getTitulo() + ", Descricao=" + getDescricao() + "]";
 	}
-	
+
 	
 
 }
