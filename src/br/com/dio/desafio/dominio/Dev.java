@@ -33,6 +33,10 @@ public class Dev {
 		}
 	}
 
+	public Dev() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public double calcularTotalXP() {
 		return this.conteudoConcluido.stream().mapToDouble(conteudo -> conteudo.calcularXp()).sum();
 	}
